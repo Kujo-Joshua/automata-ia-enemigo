@@ -1,0 +1,29 @@
+/* Fondo general de la ventana */
+.root {
+    -fx-background-color: #0d0d0d; /* Negro casi puro */
+    -fx-font-family: "Arial Black"; /* O Impact si la tienes */
+}
+
+/* Estilo base de los botones */
+.button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #00ffff; /* Cyan Neón */
+    -fx-border-color: #ff00ff; /* Magenta Neón */
+    -fx-border-width: 2px;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-padding: 10px 20px;
+}
+
+/* Cuando pasas el mouse por encima */
+.button:hover {
+    -fx-background-color: rgba(255, 0, 255, 0.1);
+    -fx-effect: dropshadow(three-pass-box, #ff00ff, 15, 0.5, 0, 0); /* Resplandor */
+    -fx-text-fill: #ffffff;
+}
+
+/* Cuando presionas el botón */
+.button:pressed {
+    -fx-background-color: #ff00ff;
+    -fx-text-fill: #000000;
+}
