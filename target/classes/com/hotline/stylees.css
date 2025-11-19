@@ -1,28 +1,49 @@
-/* Fondo general de la ventana */
+/* Fondo general */
 .root {
-    -fx-background-color: #0d0d0d; /* Negro casi puro */
-    -fx-font-family: "Arial Black"; /* O Impact si la tienes */
+    -fx-background-color: #0d0d0d;
+    -fx-font-family: "Impact", "Arial Black", sans-serif;
 }
 
-/* Estilo base de los botones */
+
+.titulo {
+    -fx-text-fill: #ffffff; /* Letra blanca para que se lea */
+    -fx-font-size: 32px;
+    /* Sombra magenta sólida detrás */
+    -fx-effect: dropshadow(gaussian, #ff00ff, 10, 0.6, 0, 0); 
+    -fx-padding: 10px;
+}
+
+.estado-label {
+    -fx-text-fill: #ffffff; /* Letra blanca */
+    -fx-font-size: 20px;
+    /* Sombra cyan detrás */
+    -fx-effect: dropshadow(gaussian, #00ffff, 8, 0.6, 0, 0);
+    -fx-padding: 10px;
+}
+
+/* --- BOTONES (Estilo Cyberpunk) --- */
+
 .button {
-    -fx-background-color: transparent;
-    -fx-text-fill: #00ffff; /* Cyan Neón */
-    -fx-border-color: #ff00ff; /* Magenta Neón */
+    -fx-background-color: rgba(0, 0, 0, 0.5); /* Un poco de fondo negro para leer mejor */
+    -fx-text-fill: #00ffff; /* Texto Cyan */
+    -fx-border-color: #ff00ff; /* Borde Magenta */
     -fx-border-width: 2px;
     -fx-font-size: 14px;
     -fx-cursor: hand;
     -fx-padding: 10px 20px;
+    
+    /* Ajuste de tamaño */
+    -fx-max-width: Infinity;
+    -fx-min-width: 150px;
+    -fx-alignment: CENTER;
 }
 
-/* Cuando pasas el mouse por encima */
 .button:hover {
-    -fx-background-color: rgba(255, 0, 255, 0.1);
-    -fx-effect: dropshadow(three-pass-box, #ff00ff, 15, 0.5, 0, 0); /* Resplandor */
-    -fx-text-fill: #ffffff;
+    -fx-background-color: rgba(255, 0, 255, 0.2);
+    -fx-text-fill: #ffffff; 
+    -fx-effect: dropshadow(three-pass-box, #ff00ff, 10, 0.3, 0, 0);
 }
 
-/* Cuando presionas el botón */
 .button:pressed {
     -fx-background-color: #ff00ff;
     -fx-text-fill: #000000;
